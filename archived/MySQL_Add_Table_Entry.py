@@ -1,8 +1,8 @@
-import MySQLdb
-
+# import MySQLdb
+import mysql.connector
 #connect and login to an existing server (ip, username, password, Database)
-#db = MySQLdb.connect("10.21.1.181","bbdlc","bbdlc","bbdlc")
-db = MySQLdb.connect("10.21.1.181","bbdlc","bbdlc","Inventory")
+#db = mysql.connector.connect("10.21.1.181","bbdlc","bbdlc","bbdlc")
+db = mysql.connector.connect("10.21.1.181","bbdlc","bbdlc","Inventory")
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
 #check the version to very connectivity
