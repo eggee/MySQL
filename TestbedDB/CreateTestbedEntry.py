@@ -26,7 +26,6 @@ data_tb_entry = ('MCI-1', 'OLT-1', '1187xxxx', 'ADTN12345678', '10.13.245.321')
 # testbed data for entry into the database.
 # parse for each device in the topology.xml then log entry.
 
-
 # Insert new testbed entry
 #The query to insert the new employee is executed and we
 cursor.execute(add_tb_entry, data_tb_entry)
