@@ -1,6 +1,7 @@
 """
+this should only have to be ran once.
 This script creates a photon_testbeds table in the 'Inventory'
-database on phpMyAdmin at 10.21.1.181 at work
+database on phpMyAdmin at 10.21.1.181 at work.
 https://dev.mysql.com/doc/connector-python/en/connector-python-example-ddl.html
 """
 
