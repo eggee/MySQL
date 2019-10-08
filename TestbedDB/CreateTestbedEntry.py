@@ -21,21 +21,22 @@ add_tb_entry = ("INSERT INTO photon_testbeds "
                "VALUES (%s, %s, %s, %s, %s)")
 
 #dummy info to test insterting testbed information
-data_tb_entry = ('MCI-1', 'OLT-1', '1187xxxx', 'ADTN12345678', '10.13.245.321')
-#TODO: add code to parse the photon topology.xml files to get the necessary
-# testbed data for entry into the database.
-# parse for each device in the topology.xml then log entry.
+for testbed in ('MCI-1', 'MCI-2', 'MCI-3', 'MCI-4'):
+    data_tb_entry = (testbed, 'OLT-1', '1187xxxx', 'ADTN12345678', '10.13.245.321')
+    #TODO: add code to parse the photon topology.xml files to get the necessary
+    # testbed data for entry into the database.
+    # parse for each device in the topology.xml then log entry.
 
-# Insert new testbed entry
-#The query to insert the new employee is executed and we
-cursor.execute(add_tb_entry, data_tb_entry)
+    # Insert new testbed entry
+    #The query to insert the new employee is executed and we
+    cursor.execute(add_tb_entry, data_tb_entry)
 
-#retrieve the newly inserted value for the indx_no column
-# (an AUTO_INCREMENT column) using the lastrowid property of the cursor object.
-indx_no = cursor.lastrowid
+    #retrieve the newly inserted value for the indx_no column
+    # (an AUTO_INCREMENT column) using the lastrowid property of the cursor object.
+    indx_no = cursor.lastrowid
 
-#it is necessary to commit your changes using the connection's commit() method.
-cnx.commit()
+    #it is necessary to commit your changes using the connection's commit() method.
+    cnx.commit()
 
 cursor.close()
 cnx.close()
